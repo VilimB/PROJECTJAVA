@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Racun">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/puj-racun/dist/Racun.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

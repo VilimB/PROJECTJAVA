@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" 
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="racun.model.KontaktModel">
+   <content>
+      <SplitPane dividerPositions="0.611864406779661" prefHeight="392.0" prefWidth="592.0">
+         <items>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0">
+               <content>
+                  <TilePane fx:id="libraryTilePane" hgap="8.0" maxHeight="1.7976931348623157E308" 
+                            maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0"
+                            stylesheets="@../css/style.css" tileAlignment="TOP_LEFT" vgap="8.0" />
+               </content>
+            </ScrollPane>
+            <SplitPane dividerPositions="0.5461538461538461" orientation="VERTICAL" prefHeight="347.0" prefWidth="243.0">
+               <items>
+                  <TableView fx:id="racunTablica" onMouseClicked="#selectArtikl" prefHeight="359.0" prefWidth="102.0">
+                    <columns>
+                      <TableColumn fx:id="nazivT" prefWidth="75.0" text="naziv" />
+                      <TableColumn fx:id="kolT" prefWidth="75.0" text="kolicina" />
+                      <TableColumn fx:id="cijenaT" minWidth="0.0" prefWidth="76.0" text="cijena" />
+                    </columns>
+                  </TableView>
+                  <AnchorPane prefHeight="66.0" prefWidth="226.0">
+                     <children>
+                        <Text layoutX="113.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cijena" />
+                        <Button fx:id="printRacuna" layoutX="14.0" layoutY="125.0" mnemonicParsing="false" onAction="#printajRacun" text="Printaj Racun" />
+                        <TextField fx:id="ukupnaCijena" layoutX="154.0" layoutY="125.0" prefHeight="25.0" prefWidth="58.0" />
+                        <Button fx:id="minuKol" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#smanjenjeKolicine" text="-" />
+                        <Button fx:id="plusKol" layoutX="70.0" layoutY="14.0" mnemonicParsing="false" onAction="#povecanjeKolicine" text="+" />
+                        <TextField fx:id="kolicina" layoutX="43.0" layoutY="14.0" prefHeight="25.0" prefWidth="29.0" />
+                        <Button fx:id="izbrisiBtn" layoutX="146.0" layoutY="14.0" mnemonicParsing="false" onAction="#izbrisiArtikl" text="Izbrisi" />
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </items>
+      </SplitPane>
+   </content>
+</ScrollPane>

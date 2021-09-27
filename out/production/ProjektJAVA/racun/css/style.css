@@ -1,0 +1,12 @@
+
+.-tiles {
+    -fx-underline: false;
+    -fx-text-fill: black;
+    -fx-padding: 8;
+}
+
+.tiles:hover {
+    -fx-underline: false;
+    -fx-text-fill: white;
+    -fx-background-color: #6ba3ff;
+}
